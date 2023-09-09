@@ -1,0 +1,16 @@
+procedure insertionSort(arr)
+    n <- length of arr
+
+    for i from 1 to n - 1
+        key <- arr[i]  // Current element to be inserted
+        j <- i - 1    // Index of the last element in the sorted portion
+
+        // Move elements of arr[0..j] that are greater than key
+        // one position ahead of their current position
+        while (j >= 0) and (arr[j] > key)
+            arr[j + 1] <- arr[j]
+            j <- j - 1
+
+        arr[j + 1] <- key  // Place key in its correct position
+
+end procedure
